@@ -236,7 +236,7 @@
 }
 
 .industry-name {
-  font-family: var(--font-display);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: var(--warm-dark);
