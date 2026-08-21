@@ -292,11 +292,17 @@
       });
 
       if (response.ok) {
+        // Disable input fields
         form.querySelectorAll('input,select,textarea').forEach(el => el.disabled = true);
+        
+        // Hide or update the submit button state on success
+        submitBtn.style.display = 'none'; // Hides the button once sent
+        
+        // Show success message
         success.classList.add('show');
         success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } else {
-        alert("Submission failed. Please check your internet connection or try again.");
+        alert("Submission failed. Please check your connection or try again.");
         submitBtn.disabled = false;
         submitBtn.innerHTML = "Send Enquiry &rarr;";
       }
